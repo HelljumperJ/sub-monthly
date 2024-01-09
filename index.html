@@ -39,14 +39,15 @@
           <p class="text-slate-800"> And much more! </p> 
         </div>
 
+        <form action="success.html">
         <label class="py-8 pb-5 pr-10 form-control">
           <div class="form-control">
-            <span class="py-2 pr-10 font-bold label-text text-slate-800">Email Address</span>
+            <span class="py-2 pr-10 font-bold label-text text-slate-800">Email address</span>
           </div>
-            <input type="email" placeholder="email@company.com" class="bg-white input input-bordered w-96 border-slate-800"/>
-          </label>
-          
-        <button class="text-white btn bg-slate-800 w-96" onclick="location.href='./success.html'" type="submit">Subscribe to monthly newsletter</button>
+            <input type="email" placeholder="email@company.com" class="bg-white input input-bordered w-96 border-slate-800" id="emailtxt" required=true/>
+        </label>
+        <button class="text-white btn bg-slate-800 w-96" onclick="alerta()" type="submit">Subscribe to monthly newsletter</button>
+        </form>  
         </div>
       </div>
 
@@ -54,5 +55,6 @@
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
     Coded by <a href="#">Jefrey Poveda</a>.
   </div>
+  <script src="main.js"></script>
 </body>
 </html>
