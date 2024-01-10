@@ -1,5 +1,6 @@
-let emailtxt = document.querySelector("#emailtxt");
+let output = document.getElementById("output");
+let fecha = document.getElementById('fecha');
 
-function alerta(){
-    console.log(emailtxt.value)
-} 
+  function leeFormulario() {
+    output.innerHTML = `La fecha seleccionada es: ${fecha.value}`;
+}

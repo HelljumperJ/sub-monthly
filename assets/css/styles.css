@@ -1317,6 +1317,14 @@ html {
   margin: auto;
 }
 
+.m-2 {
+  margin: 0.5rem;
+}
+
+.m-4 {
+  margin: 1rem;
+}
+
 .mr-4 {
   margin-right: 1rem;
 }
@@ -1398,6 +1406,11 @@ html {
   padding-bottom: 2rem;
 }
 
+.py-5 {
+  padding-top: 1.25rem;
+  padding-bottom: 1.25rem;
+}
+
 .pb-5 {
   padding-bottom: 1.25rem;
 }
@@ -1412,6 +1425,11 @@ html {
 
 .text-5xl {
   font-size: 3rem;
+  line-height: 1;
+}
+
+.text-6xl {
+  font-size: 3.75rem;
   line-height: 1;
 }
 
@@ -1467,3 +1485,4 @@ html {
        object-fit: cover;
   }
 }
+
