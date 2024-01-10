@@ -23,7 +23,7 @@ const urlParams = new URLSearchParams(window.location.search);
       alerta();
     }else{
       emailField.classList.add('bg-red-200' , 'border-red-500');
-      emailField.classList.remove('bg-green-200' , 'border-green-500');
+      emailField.classList.remove('bg-green-200' , 'border-green-500', 'bg-white', 'border-slate-800');
       errormsg.classList.remove('hidden');
     }
   } 
