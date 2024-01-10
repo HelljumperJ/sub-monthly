@@ -1,6 +1,6 @@
 let output = document.getElementById("output");
-let fecha = document.getElementById('fecha');
+let emailtxt = document.getElementById('emailtxt');
 
-  function leeFormulario() {
-    output.innerHTML = `La fecha seleccionada es: ${fecha.value}`;
+  function alerta() {
+    output.innerHTML = `La fecha seleccionada es: ${emailtxt.value}`;
 }
