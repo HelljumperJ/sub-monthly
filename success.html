@@ -11,7 +11,7 @@
     <div class="card-body">
         <img src="assets/images/icon-success.svg" class="w-12">
          <h2 class="py-8 text-5xl font-bold card-title text-slate-800">Thanks for subscribing!</h2>
-         <p class="text-slate-800">A confirmation email has been sent to <p id="output"></p>  Please open it and click the button inside to confirm your subscription.</p>
+         <p class="text-slate-800">A confirmation email has been sent to <span id="output" class="font-bold"></span>. Please open it and click the button inside to confirm your subscription.</p>
          <div class="justify-center py-8 card-actions">
           <form action="index.html">
           <button class="text-white btn w-80 " onclick="">Dismiss message</button>
@@ -19,6 +19,14 @@
          </div>
     </div>
  </div>
+ 
 
- <script src="main.js"></script>
+ <script>
+  const urlParams = new URLSearchParams(window.location.search);
+  const email = urlParams.get('email');
+
+  if (email) {
+      document.getElementById('output').innerText = decodeURIComponent(email);
+  }
+</script>
 </body>

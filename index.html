@@ -14,47 +14,52 @@
   </style>
 </head>
 
-  <!-- Sign-up form start -->
-  <body class="py-12 bg-slate-800">
-
-    <div class="flex justify-center max-w-4xl py-3 m-auto bg-white card lg:card-side">
-        <div class="order-last">
-        <figure><img src="./assets/images/illustration-sign-up-desktop.svg" class="max-w-sm py-6 rounded-lg"/></figure>
-        </div>
-        <div>
+<body class="flex items-center justify-center py-12 bg-slate-800">
+  <div class="max-w-4xl py-3 m-auto">
+    <div class="px-10 bg-white card lg:card-side">
+      <div class="order-last">
+        <figure><img src="./assets/images/illustration-sign-up-desktop.svg" class="max-w-sm py-6 ml-8 overflow-hidden rounded-xl"/></figure>
+      </div>
+      <div class="text-center">
         <h1 class="pt-16 text-5xl font-bold text-slate-800">Stay updated!</h1>
         
         <p class="py-5 text-slate-800">Join 60,000+ product managers receiving monthly <br> updates on:</p>
 
-        <div class="flex py-2">
-          <img src="./assets/images/icon-list.svg" class="mr-4"/>
+        <div class="flex items-center py-2">
+          <img src="./assets/images/icon-list.svg" class="mr-2"/>
           <p class="text-slate-800"> Product discovery and building what matters </p>
         </div>
-        <div class="flex py-2">
-          <img src="./assets/images/icon-list.svg" class="mr-4"/>
+        <div class="flex items-center py-2">
+          <img src="./assets/images/icon-list.svg" class="mr-2"/>
           <p class="text-slate-800"> Measuring to ensure updates are a success </p> 
         </div>
-        <div class="flex py-2">
-          <img src="./assets/images/icon-list.svg" class="mr-4"/>
+        <div class="flex items-center py-2">
+          <img src="./assets/images/icon-list.svg" class="mr-2"/>
           <p class="text-slate-800"> And much more! </p> 
         </div>
 
-        <form action="success.html">
-        <label class="py-8 pb-5 pr-10 form-control">
-          <div class="form-control">
-            <span class="py-2 pr-10 font-bold label-text text-slate-800">Email address</span>
+        <form onsubmit="alerta(); return false;">
+          <div class="justify-center m-auto">
+            <label for="emailtxt" class="flex items-start pt-8 -mb-4 font-bold label-text text-slate-800">Email address</label><br>
+            <input type="email" id="emailtxt" name="email" placeholder="email@company.com" class="bg-white input input-bordered w-96 border-slate-800" required=true/>
+            <br><br>
+            <button type="submit" class="mt-2 text-white btn bg-slate-800 w-96">Subscribe to monthly newsletter</button>
           </div>
-            <input type="email" placeholder="email@company.com" class="bg-white input input-bordered w-96 border-slate-800" id="emailtxt" required=true/>
-        </label>
-        <button class="text-white btn bg-slate-800 w-96" onclick="alerta()" type="submit">Subscribe to monthly newsletter</button>
-        </form>  
-        </div>
+        </form> 
       </div>
+    </div>
 
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Jefrey Poveda</a>.
+    <div class="mt-8 attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+      Coded by <a href="#">Jefrey Poveda</a>.
+    </div>
   </div>
-  <script src="main.js"></script>
+
+  <script>
+    function alerta() {
+      var email = document.getElementById('emailtxt').value;
+      window.location.href = `success.html?email=${encodeURIComponent(email)}`;
+    }
+  </script>
 </body>
 </html>
