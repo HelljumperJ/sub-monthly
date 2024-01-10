@@ -6,11 +6,15 @@
   <link href="./assets/css/styles.css" rel="stylesheet">
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
   
+  
   <title>Frontend Mentor | Newsletter sign-up form with success message</title>
 
   <style>
     .attribution { font-size: 11px; text-align: center; }
     .attribution a { color: hsl(228, 45%, 44%); }
+    .invalid {
+      border-color: red !important;
+    }
   </style>
 </head>
 
@@ -20,10 +24,10 @@
       <div class="order-last">
         <figure><img src="./assets/images/illustration-sign-up-desktop.svg" class="max-w-sm py-6 ml-8 overflow-hidden rounded-xl"/></figure>
       </div>
-      <div class="text-center">
+      <div class="">
         <h1 class="pt-16 text-5xl font-bold text-slate-800">Stay updated!</h1>
         
-        <p class="py-5 text-slate-800">Join 60,000+ product managers receiving monthly <br> updates on:</p>
+        <p class="py-5 text-slate-800">Join 60,000+ product managers receiving monthly updates on:</p>
 
         <div class="flex items-center py-2">
           <img src="./assets/images/icon-list.svg" class="mr-2"/>
@@ -39,11 +43,15 @@
         </div>
 
         <form onsubmit="alerta(); return false;">
-          <div class="justify-center m-auto">
-            <label for="emailtxt" class="flex items-start pt-8 -mb-4 font-bold label-text text-slate-800">Email address</label><br>
-            <input type="email" id="emailtxt" name="email" placeholder="email@company.com" class="bg-white input input-bordered w-96 border-slate-800" required=true/>
-            <br><br>
-            <button type="submit" class="mt-2 text-white btn bg-slate-800 w-96">Subscribe to monthly newsletter</button>
+          <div class="justify-center m-auto mt-4">
+            <label class="w-full mb-6 form-control">
+              <div class=" label">
+                <span class="font-bold label-text text-slate-800">Email address</span>
+                <span class="hidden text-red-500 label-text-alt" id="errormsg">Valid email required</span>
+              </div>
+              <input type="email" id="emailtxt" name="email" placeholder="email@company.com" class="bg-white input input-bordered border-slate-800" required=true />
+            </label>
+            <button type="button" class="w-full text-white btn bg-slate-800" onclick=validateEmail()>Subscribe to monthly newsletter</button>
           </div>
         </form> 
       </div>
@@ -55,11 +63,6 @@
     </div>
   </div>
 
-  <script>
-    function alerta() {
-      var email = document.getElementById('emailtxt').value;
-      window.location.href = `success.html?email=${encodeURIComponent(email)}`;
-    }
-  </script>
+  <script src="main.js"></script>
 </body>
 </html>
